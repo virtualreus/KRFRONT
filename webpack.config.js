@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     clean: true,
-    publicPath: '/'
+    publicPath: process.env.NODE_ENV === 'production' ? '/KRFRONT/' : '/'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.vue', '.json'],
